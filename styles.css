@@ -1,0 +1,227 @@
+@charset "UTF-16";
+body{
+  background-color: #001017;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 125vh;
+  font-family: sans-serif;
+  margin-top: 80px;
+  overflow-x: hidden;
+}
+header{
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #333;
+  border: 4px solid #4CC1E8;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+}
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #cdba87;
+  color: #cdba87;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #69be8f;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #69be8f;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Calibri",sans-serif;;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+h1.deepshadow {
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+.maintext h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+.backtofirst{
+  width: 33%;
+  text-align: center;
+}
+.backtofirst button{
+  margin-left: auto;
+  margin-right: auto;
+}
+.maintext{
+  width: 33%;
+  text-align: center;
+}
+.restart{
+  width: 33%;
+  text-align: center;
+}
+.restart button{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(72,6,110,0.4);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #cdba87;
+}
+footer{
+  color:#cdba87;
+  font-family: "Calibri",sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 1px 0px 75px 32px rgba(0,0,0,0.75);
+}
+
+main{
+  text-align: center;
+}
+
+main h1{
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+}
+
+
+
+#container {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 0px;
+  position: center;
+  padding-top: 5px;
+  bottom: 45%;
+  display: block;
+  text-align: center;
+}
+
+#flip {
+  height: 50px;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color: #fff;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background: #69be8f;
+}
+#flip div:first-child div {
+  background: #cdba87;
+}
+#flip div:last-child div {
+  background: #69be8f;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
