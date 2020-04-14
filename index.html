@@ -7,7 +7,6 @@
   <meta name="author" content="Takacs Tamas"/>
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
-  <script src="myscript.js"></script>
 </head>
 <body>
   <button onclick="topFunction()" id="myBtn" title="Go to top">Oldal Teteje</button>
@@ -34,23 +33,25 @@
     </div>
     <div class="content">
       <div class="ko" id="ko">
-        <img src="assetek/ko.png" style="width:150px;height:150px">
+        <img src="assetek/ko.png" style="width:150px;height:150px" onclick="ko()">
       </div>
       <div class="papir" id="papir">
-        <img src="assetek/papi.png" style="width:150px;height:150px">
+        <img src="assetek/papi.png" style="width:150px;height:150px" onclick="papir()">
       </div>
       <div class="ollo" id="ollo">
-        <img src="assetek/ollo.png" style="width:150px;height:150px">
+        <img src="assetek/ollo.png" style="width:150px;height:150px" onclick="javascript:ollo();">
       </div>
     </div>
-    <div class="geperedmeny">
-      A gép választása:<br>
-      <img src="assetek/ko.png" style="margin-left:auto;margin-right:auto;float:center;width:10%;">
+    <div class="geperedmeny" id="geperedmeny">
+      <br><span style="color:white;" id="nyertele"> Nyertél</span>
+      A gép választása:<br><br>
+      <img id="gepkep" src="assetek/ko.png" style="margin-left:auto;margin-right:auto;float:center;width:10%;">
     </div>
     <div class="scoreboard">
       <h1 style="color:#69be8f">Nyert játszmáid száma: (<span id="nyert">0</span>)</h1>
       <h1 style="color:#4CC1E8">Vesztett játszmáid száma: (<span id="vesztett">0</span>)</h1>
       <h1 style="color:#cdba87">Legnagyobb győzedelmi sorozat: (<span id="sorozat">0</span>)</h1>
+      <h1 style="color:#cdba87">Döntetlen játszmáid száma: (<span id="dont">0</span>)</h1>
     </div>
   </main>
   <br>
@@ -58,4 +59,5 @@
   <footer style="color:#4CC1E8">
     Takács Tamás&copy; - 2020.04.11. - Second WebPage
   </footer>
+  <script src="myscript.js"></script>
 </body>
