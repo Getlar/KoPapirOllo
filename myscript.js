@@ -1,3 +1,6 @@
+var egymasUtaniNyeresegek = 0;
+
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -18,5 +21,10 @@ function returnMain(){
 }
 
 function gotoPage(){
-  window.location.href = "https://getlar.github.io/WebPage";
+  if (egymasUtaniNyeresegek <5) {
+    alert("Még nem érted el az ötöt!")
+    return false;
+  }else{
+    window.location.href = "https://getlar.github.io/WebPage";
+  }
 }
