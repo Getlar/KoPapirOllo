@@ -227,8 +227,45 @@ main h1{
 }
 .content{
   padding-top: 100px;
-  margin: auto;
-  padding: auto;
+  width: 100%;
   text-align: center;
   display: inline-block;
+}
+.ko{
+  margin-left: 17%;
+  width: 25%;
+  float:left;
+}
+.ko:hover{
+  border: 2px solid #cdba87;
+  box-shadow: 1px 0px 50px 32px rgb(205,186,135,0.75);
+}
+.papir:hover{
+  border: 2px solid #69be8f;
+  box-shadow: 1px 0px 50px 32px rgb(105,190,143,0.75);
+}
+.ollo:hover{
+  border: 2px solid #4CC1E8;
+  box-shadow: 1px 0px 50px 32px rgb(76,193,232,0.75);
+}
+.papir{
+  margin-left: 4%;
+  float:left;
+}
+.ollo{
+  margin-right: 17%;
+  width: 25%;
+  float:right;
+}
+.geperedmeny{
+  padding-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  display: none;
+}
+.scoreboard{
+  padding-top: 2%;
 }
