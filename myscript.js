@@ -19,7 +19,7 @@
   }
 
   function gotoPage(){
-    if (sorozat < 5) {
+    if (sorozat < 3) {
       alert("Még nem érted el az ötöt!")
     }else{
       window.location.href = "https://getlar.github.io/WebPage";
